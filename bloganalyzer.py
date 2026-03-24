@@ -1,3 +1,5 @@
+!pip install -q transformers==4.36.2 torch gradio scikit-learn keybert sentence-transformers
+
 from transformers import pipeline
 from keybert import KeyBERT
 import gradio as gr
@@ -29,7 +31,7 @@ def analyze(text):
     return f"🔑 Keywords:\n{keywords}\n\n📌 Key Points:\n{key_points}"
 
 with gr.Blocks() as app:
-    gr.Markdown("## 🔥 Smart Blog Analyzer (High Accuracy)")
+    gr.Markdown("## Smart Blog Analyzer")
 
     blog = gr.Textbox(lines=10, placeholder="Paste blog here...")
 
