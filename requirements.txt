@@ -1,6 +1,7 @@
-flask
+
 transformers==4.36.2
 torch
 keybert
 sentence-transformers
 scikit-learn
+gradio
